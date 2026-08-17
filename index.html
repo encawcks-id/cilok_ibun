@@ -6,9 +6,6 @@
 
     <title>CILOK IBUN - Google Sheets Integrated</title>
 
-    <!-- Favicon Cilok dari URL -->
-    <link rel="icon" type="image/png" href="favicon.png">
-
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -51,6 +48,7 @@
             min-height: 100vh;
             background-color: #f8fafc;
         }
+
         /* Overlay patterned background */
         body::before {
             content: "";
@@ -134,25 +132,25 @@
     <div class="main-app-wrapper flex min-h-screen">
         
         <!-- Desktop Sidebar -->
-        <aside class="hidden md:flex flex-col w-56 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 sticky top-0 h-screen z-30">
-            <div class="p-5 border-b border-gray-100 dark:border-gray-700 flex items-center gap-3">
-                <!-- Logo Cilok -->
-                <div class="w-10 h-10 rounded-full overflow-hidden shadow-lg shadow-primary-500/30 flex-shrink-0">
-            <img
-                src="favicon.png"
-                alt="Cilok Ibun"
-                class="w-full h-full object-cover"
-            >
-        </div>
-                <div>
-                    <h1 id="brand-title" class="font-bold text-base leading-tight">
-                        Cilok Ibun
-                    </h1>
-                    <span class="text-xs text-gray-400">
-                        Manajemen Usaha Ibun
-                    </span>
-                </div>
+            <aside class="hidden md:flex flex-col w-56 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 sticky top-0 h-screen z-30">
+                <div class="p-5 border-b border-gray-100 dark:border-gray-700 flex items-center gap-3">
+                    <!-- Logo Cilok -->
+                    <div class="w-10 h-10 rounded-full overflow-hidden shadow-lg shadow-primary-500/30 flex-shrink-0">
+                <img
+                    src="favicon.png"
+                    alt="Cilok Ibun"
+                    class="w-full h-full object-cover"
+                >
             </div>
+                    <div>
+                        <h1 id="brand-title" class="font-bold text-base leading-tight">
+                            Cilok Ibun
+                        </h1>
+                        <span class="text-xs text-gray-400">
+                            Manajemen Usaha Ibun
+                        </span>
+                    </div>
+                </div>
 
             <!-- Database Connection Status Badge -->
             <div class="px-4 pt-3">
@@ -248,7 +246,7 @@
             <div class="p-4 md:p-8 max-w-7xl w-full mx-auto flex-1">
                 
                 <!-- 1. DASHBOARD PAGE -->
-                <section id="page-dashboard" class="page-section space-y-4">
+                <section id="page-dashboard" class="page-section space-y-4 -mt-6">
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
                         <div>
                             <h2 class="text-2xl font-extrabold tracking-tight">Dashboard Usaha</h2>
@@ -279,7 +277,7 @@
                                 </div>
                                 <div class="bg-white/10 backdrop-blur rounded-2xl p-3.5">
                                     <span class="text-xs text-primary-100 block">Total Cilok</span>
-                                    <span id="dh-today-packs" class="text-2xl font-extrabold mt-1 block">0 <span class="text-xs font-normal">Pack</span></span>
+                                    <span id="dh-today-pcs" class="text-2xl font-extrabold mt-1 block">0 <span class="text-xs font-normal">Pcs</span></span>
                                 </div>
                                 <div class="bg-white/10 backdrop-blur rounded-2xl p-3.5">
                                     <span class="text-xs text-primary-100 block">Omzet Hari Ini</span>
@@ -372,7 +370,7 @@
                 </section>
 
                 <!-- 2. ORDERS PAGE -->
-                <section id="page-orders" class="page-section hidden space-y-4">
+                <section id="page-orders" class="page-section hidden space-y-4 -mt-6">
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
                         <div>
                             <h2 class="text-2xl font-extrabold tracking-tight">Daftar Pesanan & PO</h2>
@@ -442,7 +440,7 @@
                 </section>
 
                 <!-- 3. CUSTOMERS PAGE -->
-                <section id="page-customers" class="page-section hidden space-y-4">
+                <section id="page-customers" class="page-section hidden space-y-4 -mt-6">
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
                         <div>
                             <h2 class="text-2xl font-extrabold tracking-tight">Data Pelanggan</h2>
@@ -464,7 +462,7 @@
                 </section>
 
                 <!-- 4. PRODUCTS PAGE -->
-                <section id="page-products" class="page-section hidden space-y-4">
+                <section id="page-products" class="page-section hidden space-y-4 -mt-6">
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
                         <div>
                             <h2 class="text-2xl font-extrabold tracking-tight">Data Produk Cilok</h2>
@@ -486,7 +484,7 @@
                 </section>
 
                 <!-- 5. RECEIVABLES PAGE (PIUTANG) -->
-                <section id="page-receivables" class="page-section hidden space-y-4">
+                <section id="page-receivables" class="page-section hidden space-y-4 -mt-6">
                     <div>
                         <h2 class="text-2xl font-extrabold tracking-tight">Rekap Piutang & Belum Lunas</h2>
                         <p class="text-sm text-gray-500 dark:text-gray-400">Daftar pesanan yang belum lunas atau masih memiliki sisa tagihan</p>
@@ -572,7 +570,7 @@
                     </div>
 
                     <!-- GOOGLE SHEETS / GAS INTEGRATION CARD -->
-                    <div class="bg-gradient-to-r from-emerald-600 to-teal-700 text-white p-6 rounded-3xl shadow-xl space-y-4">
+                    <div class="bg-gradient-to-r from-emerald-600 to-teal-700 text-white p-6 rounded-3xl shadow-xl space-y-4 -mt-6">
                         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                             <div>
                                 <h3 class="font-bold text-lg flex items-center gap-2">
@@ -1063,8 +1061,9 @@ function getOrCreateSheet(ss, name) {
                     poPrefix: "PO-"
                 },
                 gasConfig: {
-                    url: "",
-                    autoSync: false,
+                    // GANTI TULISAN DI BAWAH INI DENGAN URL GAS ANDA:
+                    url: "https://script.google.com/macros/s/AKfycbx.../exec",
+                    autoSync: true,
                     lastSync: null
                 },
                 customers: [],
@@ -1083,14 +1082,26 @@ function getOrCreateSheet(ss, name) {
                 this.ui.initTheme();
                 this.nav.changePage('dashboard');
                 this.gas.updateDbStatusBadge();
+
+                // Otomatis tarik data dari Google Sheets saat aplikasi pertama kali dibuka
+                if (this.data.gasConfig && this.data.gasConfig.url && !this.data.gasConfig.url.includes("MASUKKAN_URL_GAS_ANDA_DI_SINI")) {
+                    this.gas.pullFromCloud(true); // silent pull on startup
+                }
             },
 
             loadData: function() {
+                const defaultGasUrl = this.data.gasConfig.url;
                 const saved = localStorage.getItem('cilok_app_data');
                 if (saved) {
                     try {
                         const parsed = JSON.parse(saved);
                         this.data = { ...this.data, ...parsed };
+                        
+                        // Jika URL di penyimpanan lokal belum diisi / kosong, otomatis pakai URL default
+                        if (!this.data.gasConfig || !this.data.gasConfig.url || this.data.gasConfig.url.includes("MASUKKAN_URL_GAS_ANDA_DI_SINI")) {
+                            if (!this.data.gasConfig) this.data.gasConfig = {};
+                            this.data.gasConfig.url = defaultGasUrl;
+                        }
                     } catch(e) {
                         console.error("Gagal memuat data", e);
                     }
@@ -1101,7 +1112,7 @@ function getOrCreateSheet(ss, name) {
 
             saveData: function() {
                 localStorage.setItem('cilok_app_data', JSON.stringify(this.data));
-                if (this.data.gasConfig && this.data.gasConfig.autoSync && this.data.gasConfig.url) {
+                if (this.data.gasConfig && this.data.gasConfig.autoSync && this.data.gasConfig.url && !this.data.gasConfig.url.includes("MASUKKAN_URL_GAS_ANDA_DI_SINI")) {
                     this.gas.syncToCloud(true); // silent auto sync
                 }
             },
@@ -1163,7 +1174,7 @@ function getOrCreateSheet(ss, name) {
                     const statusLabel = document.getElementById('gas-status-label');
                     const lastSyncLabel = document.getElementById('gas-last-sync');
 
-                    if (url && url.trim().length > 10) {
+                    if (url && url.trim().length > 10 && !url.includes("AKfycbx...")) {
                         if (dot) dot.className = "w-2.5 h-2.5 rounded-full bg-emerald-500 shrink-0";
                         if (text) text.innerText = "Google Sheets";
                         if (mobDot) mobDot.className = "w-2 h-2 rounded-full bg-emerald-500 inline-block";
@@ -1176,41 +1187,51 @@ function getOrCreateSheet(ss, name) {
                         if (mobText) mobText.innerText = "Lokal";
                         if (statusLabel) statusLabel.innerText = "Belum Dikoneksikan (Lokal)";
                     }
-
-                    if (lastSyncLabel && app.data.gasConfig && app.data.gasConfig.lastSync) {
-                        lastSyncLabel.innerText = `Terakhir Sync: ${app.data.gasConfig.lastSync}`;
+                    if (app.data.gasConfig && app.data.gasConfig.lastSync && lastSyncLabel) {
+                        lastSyncLabel.innerText = "Terakhir Sync: " + app.data.gasConfig.lastSync;
                     }
                 },
 
                 testConnection: function() {
-                    const url = document.getElementById('gas-url-input').value.trim();
-                    if (!url) {
-                        app.ui.toast("Masukkan URL Apps Script terlebih dahulu!");
+                    this.pullFromCloud(false);
+                },
+
+                pullFromCloud: function(isSilent = false) {
+                    const url = app.data.gasConfig ? app.data.gasConfig.url : '';
+                    if (!url || url.includes("AKfycbx...")) {
+                        if (!isSilent) app.ui.toast("URL Google Sheets belum diset di Pengaturan.");
                         return;
                     }
 
-                    app.ui.toast("Menghubungi Google Apps Script...");
-                    fetch(`${url}?action=test`)
+                    if (!isSilent) app.ui.toast("Menarik data dari Google Sheets...");
+                    fetch(`${url}?action=read`)
                         .then(res => res.json())
-                        .then(data => {
-                            if (data.status === "success" || data.message) {
-                                app.ui.toast("Koneksi Google Sheets Berhasil!");
-                                app.data.gasConfig.url = url;
-                                app.saveData();
+                        .then(cloudData => {
+                            if (cloudData) {
+                                if (cloudData.settings && Object.keys(cloudData.settings).length > 0) {
+                                    app.data.settings = { ...app.data.settings, ...cloudData.settings };
+                                }
+                                if (cloudData.products && cloudData.products.length > 0) app.data.products = cloudData.products;
+                                if (cloudData.customers && cloudData.customers.length > 0) app.data.customers = cloudData.customers;
+                                if (cloudData.orders && cloudData.orders.length > 0) app.data.orders = cloudData.orders;
+
+                                const nowStr = new Date().toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });
+                                app.data.gasConfig.lastSync = nowStr;
+                                localStorage.setItem('cilok_app_data', JSON.stringify(app.data));
+                                app.nav.changePage(app.state.currentPage);
                                 this.updateDbStatusBadge();
-                            } else {
-                                app.ui.toast("Respon Apps Script tidak dikenal.");
+                                if (!isSilent) app.ui.toast("Data berhasil diperbarui dari Google Sheets!");
                             }
                         })
                         .catch(err => {
                             console.error(err);
-                            app.ui.toast("Gagal terhubung. Cek permission Web App deployment.");
+                            if (!isSilent) app.ui.toast("Gagal menarik data dari Sheets.");
                         });
                 },
 
                 syncToCloud: function(isSilent = false) {
                     const url = app.data.gasConfig ? app.data.gasConfig.url : '';
-                    if (!url) {
+                    if (!url || url.includes("AKfycbx...")) {
                         if (!isSilent) app.ui.toast("URL Google Sheets belum diset di Pengaturan.");
                         return;
                     }
@@ -1241,39 +1262,6 @@ function getOrCreateSheet(ss, name) {
                         if (syncIcon) syncIcon.classList.remove('fa-spin');
                         if (!isSilent) app.ui.toast("Gagal push ke Google Sheets.");
                     });
-                },
-
-                pullFromCloud: function() {
-                    const url = app.data.gasConfig ? app.data.gasConfig.url : '';
-                    if (!url) {
-                        app.ui.toast("URL Google Sheets belum diset di Pengaturan.");
-                        return;
-                    }
-
-                    app.ui.toast("Menarik data dari Google Sheets...");
-                    fetch(`${url}?action=read`)
-                        .then(res => res.json())
-                        .then(cloudData => {
-                            if (cloudData) {
-                                if (cloudData.settings && Object.keys(cloudData.settings).length > 0) {
-                                    app.data.settings = { ...app.data.settings, ...cloudData.settings };
-                                }
-                                if (cloudData.products && cloudData.products.length > 0) app.data.products = cloudData.products;
-                                if (cloudData.customers && cloudData.customers.length > 0) app.data.customers = cloudData.customers;
-                                if (cloudData.orders && cloudData.orders.length > 0) app.data.orders = cloudData.orders;
-
-                                const nowStr = new Date().toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });
-                                app.data.gasConfig.lastSync = nowStr;
-                                app.saveData();
-                                app.nav.changePage(app.state.currentPage);
-                                this.updateDbStatusBadge();
-                                app.ui.toast("Data berhasil diperbarui dari Google Sheets!");
-                            }
-                        })
-                        .catch(err => {
-                            console.error(err);
-                            app.ui.toast("Gagal menarik data dari Sheets.");
-                        });
                 },
 
                 openScriptModal: function() {
